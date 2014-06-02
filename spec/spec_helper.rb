@@ -1,1 +1,1 @@
-spec_helper.rb
+require '99names'
