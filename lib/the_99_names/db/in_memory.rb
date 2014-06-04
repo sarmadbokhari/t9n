@@ -1,4 +1,4 @@
-module 99Names
+module The99Names
   module Database
     class InMemory
 

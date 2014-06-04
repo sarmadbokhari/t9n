@@ -2,6 +2,7 @@ source "https://rubygems.org"
 ruby "2.1.1"
 gem "rspec"
 gem "activerecord"
+gem "active_record_tasks"
 gem "pry-debugger"
 gem "dotenv"
 group :development do
