@@ -1,1 +1,1 @@
-require '99names'
+require 'the_99_names'
