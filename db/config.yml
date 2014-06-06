@@ -1,11 +1,9 @@
-development:
-  adapter: sqlite3
-  database: the_99_names_dev
-  pool: 5
-  timeout: 5000
-
 test:
-  adapter: sqlite3
-  database: the_99_names_test
+  adapter: postgresql
+  database: the99names
+  username: t9n
+  password: the99names
+  host: 162.243.207.15
+  port: 5432
   pool: 5
   timeout: 5000

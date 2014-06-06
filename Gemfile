@@ -5,10 +5,7 @@ gem "activerecord"
 gem "active_record_tasks"
 gem "pry-debugger"
 gem "dotenv"
-group :development do
-  gem "sqlite3"
-end
-
-group :production do
-  gem "pg"
-end
+gem "twilio-ruby"
+gem "vcr"
+gem "webmock"
+gem "pg"

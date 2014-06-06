@@ -1,0 +1,12 @@
+<p>subscribe to receive daily or weekly text messages with one of God's 99 names</p>
+<p class="subscribe-response"></p>
+<%= form_tag("/users", method: "POST", class: "subscribe-form") do %>
+  <label for="phone_number">phone number: </label>
+  <input type="text" name="phone_number" id="phone_number">
+  <fieldset>
+    <legend>How often would you like to be texted?</legend>
+      <input type="radio" name="frequency" value="daily">Daily<br />
+      <input type="radio" name="frequency" value="weekly">Weekly<br />
+  </fieldset>
+  <input type="submit" value="subscribe">
+<% end %>

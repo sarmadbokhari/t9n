@@ -11,6 +11,8 @@ module The99Names
         validates :phone_number, uniqueness: true
 
       end
+      class Name < ActiveRecord::Base
+      end
 
       def reset
         User.delete_all
@@ -26,6 +28,17 @@ module The99Names
           entity_user = "not valid"
         end
         return entity_user
+      end
+
+      def list_names
+        ar_names = Name.all
+        entity_names = []
+
+        ar_names.each do |name|
+          entity_name = The99Names::Name.new(name.attributes)
+          entity_names << entity_name
+        end
+        return entity_names
       end
     end
   end
