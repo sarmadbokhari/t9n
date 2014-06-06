@@ -40,6 +40,11 @@ module The99Names
         end
         return entity_names
       end
+
+      def get_name(name_id)
+        ar_name = Name.find(name_id)
+        entity_name = The99Names::Name.new(ar_name.attributes)
+      end
     end
   end
 end

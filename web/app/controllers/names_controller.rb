@@ -4,7 +4,7 @@ class NamesController < ApplicationController
   end
 
   def show
-
+    @name = The99Names.db.get_name(params[:id])
   end
 
   def edit
