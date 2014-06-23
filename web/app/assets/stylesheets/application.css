@@ -226,9 +226,9 @@ a.small {
   outline: 0;
 }
 
-/* Movie List Styles */
+/* t9n List Styles */
 
-.movielist {
+.t9nlist {
   background: #EEE8D5;
   width: 50%;
   min-width: 290px;
@@ -240,13 +240,13 @@ a.small {
   z-index: 10;
 }
 
-.movielist ul {
+.t9nlist ul {
   margin: 0;
   padding: 0;
   background: #FDF6E3;
 }
 
-.movielist li {
+.t9nlist li {
   margin: 0;
   padding: 10px 10px 0 10px;
   border-bottom: 1px dotted black;
@@ -256,12 +256,12 @@ a.small {
   transition: all 0.3s ease-out;
 }
 
-.movielist a {
+.t9nlist a {
   display: block;
   text-decoration: none;
 }
 
-.movielist li:hover {
+.t9nlist li:hover {
   background: #FDF6E3;
   opacity: 1;
   -webkit-transform: scale(1.2);
@@ -270,7 +270,7 @@ a.small {
   transform: scale(1.2);
 }
 
-.movie img {
+.t9n img {
   display: block;
   float: left;
   width: 60px;
@@ -280,17 +280,17 @@ a.small {
   margin-bottom: 10px;
 }
 
-.movie info {
+.t9n info {
   display: block;
   float: left;
   padding-left: 120px !important;
 }
 
-.movie:last-child {
+.t9n:last-child {
   border-bottom:none;
 }
 
-.movieinfo {
+.t9ninfo {
   font-size: 1.1em;
   line-height: 160%;
   background: #EEE8D5;
@@ -306,26 +306,26 @@ a.small {
   z-index: 20;
 }
 
-.movieinfo h1{
+.t9ninfo h1{
   font-size: 1.8em;
   margin-bottom: 0;
 }
 
-.movieinfo img {
+.t9ninfo img {
   width: 40%;
   max-width: 130px;
   border-radius: 20px;
 }
 
-.movie.ng-enter.ng-enter-active,
-.movie.ng-leave {
+.t9n.ng-enter.ng-enter-active,
+.t9n.ng-leave {
   opacity: 1;
   height: 80px;
   overflow: hidden;
 }
 
-.movie.ng-leave.ng-leave-active,
-.movie.ng-enter {
+.t9n.ng-leave.ng-leave-active,
+.t9n.ng-enter {
   opacity: 0;
   height: 0;
   overflow: hidden;
