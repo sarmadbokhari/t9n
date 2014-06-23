@@ -1,4 +1,10 @@
-test:
+test: 
+  adapter: sqlite3
+  database: the99names_dev
+  pool: 5
+  timeout: 5000
+
+development:
   adapter: postgresql
   database: the99names
   username: t9n

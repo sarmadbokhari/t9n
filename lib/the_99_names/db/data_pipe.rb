@@ -14,6 +14,9 @@ module The99Names
       class Name < ActiveRecord::Base
       end
 
+      class Admin < ActiveRecord::Base
+      end
+
       def reset
         User.delete_all
       end
@@ -44,6 +47,18 @@ module The99Names
       def get_name(name_id)
         ar_name = Name.find(name_id)
         entity_name = The99Names::Name.new(ar_name.attributes)
+      end
+
+      def create_admin(username, password)
+        password_digest = BCrypt::Password.create(password)
+        new_admin = Admin.new(username: username, password_digest: password_digest)
+        new_admin.save
+        entity_admin = The99Names::Admin.new(new_admin.attributes)
+      end
+
+      def get_admin_pw_hash(username)
+        admin = Admin.find_by(username: username)
+        pw_hash = BCrypt::Password.new(admin.password_digest)
       end
     end
   end

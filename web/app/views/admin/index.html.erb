@@ -1,0 +1,11 @@
+<h1>Admin sign-in</h1>
+
+<%= form_tag("/admin", method: "post", class: "admin-login-form") do %>
+	<label for="username">username: </label>
+	<input type="text" name="username" id="username">
+
+	<label for="password">password:</label>
+	<input type="password" name="password" id="password">
+
+	<input type="submit" name="admin-login-submit" value="Log in">
+<% end %>

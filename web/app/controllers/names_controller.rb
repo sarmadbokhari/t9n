@@ -1,6 +1,11 @@
 class NamesController < ApplicationController
   def index
     @names = The99Names.db.list_names
+
+    respond_to do |format|
+      format.html {render html: "names/index"}
+      format.json {render json: @names}
+    end
   end
 
   def show
