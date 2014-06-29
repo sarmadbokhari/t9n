@@ -18,6 +18,7 @@ require_relative 'the_99_names/db/data_pipe.rb'
 ########## USE CASES / COMMANDS ##########
 require_relative 'the_99_names/use_cases/use_case.rb'
 require_relative 'the_99_names/use_cases/subscribe.rb'
+require_relative 'the_99_names/use_cases/log_in.rb'
 
 module The99Names
   def self.db

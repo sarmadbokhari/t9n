@@ -19,6 +19,7 @@ module The99Names
 
       def reset
         User.delete_all
+        Admin.delete_all
       end
 
       def create_user(params)
@@ -54,6 +55,16 @@ module The99Names
         new_admin = Admin.new(username: username, password_digest: password_digest)
         new_admin.save
         entity_admin = The99Names::Admin.new(new_admin.attributes)
+      end
+
+      def get_admin_by_username(username)
+        admin = Admin.find_by(username: username)
+        
+        if admin
+          entity_admin = The99Names::Admin.new(admin.attributes)
+        end
+
+        return entity_admin
       end
 
       def get_admin_pw_hash(username)

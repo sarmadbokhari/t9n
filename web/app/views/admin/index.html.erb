@@ -1,5 +1,9 @@
 <h1>Admin sign-in</h1>
 
+<% if flash[:message] %>
+	<p>incorrect username or password</p>
+<% end %>
+
 <%= form_tag("/admin", method: "post", class: "admin-login-form") do %>
 	<label for="username">username: </label>
 	<input type="text" name="username" id="username">
