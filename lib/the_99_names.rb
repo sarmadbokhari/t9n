@@ -23,7 +23,7 @@ require_relative 'the_99_names/use_cases/log_in.rb'
 module The99Names
   def self.db
     config = YAML.load_file File.join(File.dirname(__FILE__), "../db/config.yml")
-    @__db__ ||= The99Names::Database::DataPipe.new(config[ENV['DB_ENV']])
+    @__db__ ||= The99Names::Database::DataPipe.new(config["development"])
   end
 end
 

@@ -4,6 +4,43 @@
 <input ng-model="query" placeholder="Search names" autofocus>
 <h1>Testing: {{query}}</h1>
 
+<section class="moviepage">
+  <div class="search">
+    <h1>The 99 Names of God</h1>
+    <label>search: </label>
+    <input ng-model="query" placeholder="Search names" autofocus>
+
+    <label class="formgroup">by:
+      <select ng-model="nameOrder">
+        <option value="title">Title</option>
+        <option value="release_date">Date</option>
+      </select>
+    </label>
+
+    <label class="formgroup">
+      <input type="radio" ng-model="direction" name="direction" checked>
+      ascending
+    </label>
+    <label class="formgroup">
+      <input type="radio" ng-model="direction" name="direction" value="reverse">
+      descending
+    </label>
+  </div>
+
+  <ul class="t9nlist">
+    <li ng-animate="'animate'" class="t9n cf" ng-repeat="item in names | filter: query | orderBy: nameOrder:direction">
+      <a href="#/details/{{ names.indexOf(item) }}">
+        <img ng-src="http://image.tmdb.org/t/p/w500{{item.poster_path}}" alt="movie poster">
+        <div class="info">
+          <h2>{{item.title}}</h2>
+          <h3>Release date: {{item.release_date}}</h3>
+        </div>
+      </a>
+    </li>
+  </ul>
+</section>
+
+
 <ul>
   <% @names.each do |name| %>
     <li><%= name.arabic_name %></li>
