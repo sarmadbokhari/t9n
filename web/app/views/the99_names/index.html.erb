@@ -1,8 +1,3 @@
-<% if admin? %>
-  <h1>hello moto <%= session[:admin_id] %></h1>
-
-<% end %>
-
 <p>subscribe to receive daily or weekly text messages with one of God's 99 names</p>
 <p class="subscribe-response"></p>
 <%= form_tag("/users", method: "POST", class: "subscribe-form") do %>
