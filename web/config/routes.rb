@@ -6,6 +6,8 @@ Web::Application.routes.draw do
 
   get "/names/:id" => "names#show"
 
+  get "/names/:id/edit" => "names#edit"
+
   get "/admin" => "admin#index"
 
   post "/admin" => "admin#log_in"

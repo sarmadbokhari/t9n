@@ -13,6 +13,7 @@ class NamesController < ApplicationController
   end
 
   def edit
+    @name = The99Names.db.get_name(params[:id])
   end
 
   def update

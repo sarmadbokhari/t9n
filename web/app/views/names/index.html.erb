@@ -43,6 +43,11 @@
 
 <ul>
   <% @names.each do |name| %>
-    <li><%= name.arabic_name %></li>
+    <li><a href="/names/<%= name.id %>"><%= name.arabic_name %></a></li>
+
+    <% if admin? %>
+      <a href="/names/<%= name.id %>/edit">edit</a>
+    <% end %>
+
   <% end %>
 </ul>

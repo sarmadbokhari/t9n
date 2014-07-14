@@ -1,2 +1,32 @@
-<h1>Names#edit</h1>
-<p>Find me in app/views/names/edit.html.erb</p>
+<h1><%= @name.arabic_name %></h1>
+
+<%= form_tag("/names/#{@name.id}", method: "POST") do %>
+  <label for="english_transliteration">English Transliteration</label>
+  <div>
+    <input type="text" name="english_transliteration" id="english_transliteration" value="<%= @name.english_transliteration %>">
+  </div>
+
+  <label for="etymology">Etymology</label>
+  <div>
+    <textarea name="etymology" id="etymology" cols="90" rows="30"><%= @name.etymology %></textarea>
+  </div>
+
+  <label for="article">Article</label>
+  <div>
+    <input type="text" name="article" id="article" value="<%= @name.article %>">
+  </div>
+
+  <label for="triliteral_root">Triliteral Root</label>
+  <div>
+    <input type="text" name="triliteral_root" id="triliteral_root" value="<%= @name.triliteral_root %>">
+  </div>
+
+  <label for="dictionary_definition">Dictionary Definition</label>
+  <div>
+   <textarea name="dictionary_definition" id="dictionary_definition" cols="90" rows="30"><%= @name.dictionary_definition %></textarea>
+  </div>
+
+  <div>
+    <input type="submit" value="Update">
+  </div>
+<% end %>

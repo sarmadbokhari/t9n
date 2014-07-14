@@ -1,8 +1,8 @@
-test: 
+test:
   adapter: sqlite3
   database: the99names_dev
   pool: 5
-  timeout: 5000
+  timeout: 5000000000
 
 development:
   adapter: postgresql
@@ -12,4 +12,4 @@ development:
   host: 162.243.207.15
   port: 5432
   pool: 5
-  timeout: 5000
+  timeout: 90000

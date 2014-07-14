@@ -57,9 +57,19 @@ module The99Names
         entity_admin = The99Names::Admin.new(new_admin.attributes)
       end
 
+      def get_admin(admin_id)
+        admin = Admin.find(admin_id)
+
+        if admin
+          entity_admin = The99Names::Admin.new(admin.attributes)
+        end
+
+        return entity_admin
+      end
+
       def get_admin_by_username(username)
         admin = Admin.find_by(username: username)
-        
+
         if admin
           entity_admin = The99Names::Admin.new(admin.attributes)
         end
